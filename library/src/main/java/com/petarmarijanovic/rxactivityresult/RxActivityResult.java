@@ -63,4 +63,10 @@ public class RxActivityResult {
     Context applicationContext = fragment.getContext().getApplicationContext();
     return new Intent(applicationContext, cls);
   }
+
+  /** Start intent and does not wait for result unlike {@link #start(android.content.Intent)}. */
+  public void startAndForget(final Intent intent) {
+    fragment.startActivity(intent);
+  }
+
 }
