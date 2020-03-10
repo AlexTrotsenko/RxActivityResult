@@ -41,4 +41,10 @@ public class RxActivityResult {
   public Single<ActivityResult> start(final PendingIntent pendingIntent) {
     return fragment.start(pendingIntent);
   }
+
+  /** Start intent and does not wait for result unlike {@link #start(android.content.Intent)}. */
+  public void startAndForget(final Intent intent) {
+    fragment.startActivity(intent);
+  }
+
 }
